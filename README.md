@@ -306,3 +306,5 @@ Para aliviar la carga de los datos se establece una carga en delta por años:
             Fecha    --->    Fecha formato dd/mm/yyyy
             year     --->    año
             Month    --->    Mes
+            
+Para ver el dashboard realizado en PowerBI clic [aqui](https://app.powerbi.com/view?r=eyJrIjoiYjFjYWFkMzItOTllMy00ZDQ1LWEwNDctMTk2NTBjZjBiYzE2IiwidCI6ImJhYjBiNjc5LWJkNWYtNGZlOC1iNTE2LWM2YjhiMzE3Yzc4MiIsImMiOjR9)
