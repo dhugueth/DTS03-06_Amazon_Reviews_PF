@@ -1,0 +1,61 @@
+user_index,recommended_products,recommend_top_items
+0,"<PandasArray>
+['B00GUO2SKA', 'B00FZM8Z7I', 'B00G4Q3KOC', '6304308469', '6301972023']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'Grand Hotel [VHS]', 'Maltese Falcon / Movie [VHS]']"
+1,"<PandasArray>
+['B00GUO2SKA', 'B005LAIHSG', 'B008JFURII', 'B004A8ZWVK', 'B0034G4P80']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'NaN', 'NaN']"
+2,"<PandasArray>
+['B008JFURII', 'B008JFUS0U', 'B008JFUPFI', '6302219205', 'B008JFUOWM']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'Riddick (Dvd, 2013) Rental Exclusive', 'NaN']"
+3,"<PandasArray>
+['0788812408', 'B00E8RK5OC', '0788802194', '0767853636', 'B00BC36YWC']
+Length: 5, dtype: object","['The Little Mermaid (Fully Restored Special Edi...', 'NaN', ""Cinderella (Walt Disney's Masterpiece) [VHS]"", 'Annie (Widescreen Edition)', 'NaN']"
+4,"<PandasArray>
+['B00H1RMOI6', 'B00DZP1BZ0', 'B00HNGZHDE', 'B00FZM8Z7I', 'B0034G4P30']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'NaN', 'NaN']"
+5,"<PandasArray>
+['B00003CXFG', '6304238096', '6300215539', 'B00FZM8Z7I', 'B008JFUS0U']
+Length: 5, dtype: object","['Pitch Black (Unrated Version)', 'Death Race 2000 [VHS]', 'War of the Worlds (1949) [VHS]', 'NaN', 'NaN']"
+6,"<PandasArray>
+['B0059XTU3G', '6302219205', 'B008JFUQ16', 'B008JFUNTG', 'B008JFUS5A']
+Length: 5, dtype: object","['NaN', 'Riddick (Dvd, 2013) Rental Exclusive', 'NaN', 'NaN', 'NaN']"
+7,"<PandasArray>
+['B00G15MDI0', '0782002064', '6301586042', '6302760046', 'B000XT1P48']
+Length: 5, dtype: object","['NaN', ""It's a Wonderful Life (Original Uncut Version)..."", 'Ghost &amp; Mrs Muir [VHS]', '2001: A Space Odyssey [VHS]', 'NaN']"
+8,"<PandasArray>
+['B008JFUQ16', 'B00HEPDGKA', 'B00GMV8LIO', 'B00DL47RQ2', '0783225792']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'NaN', 'Casino']"
+9,"<PandasArray>
+['6304697961', 'B008JFUS0U', '6302760046', 'B00A2H9WW8', 'B005LAIHXQ']
+Length: 5, dtype: object","['Halloween', 'NaN', '2001: A Space Odyssey [VHS]', 'NaN', 'NaN']"
+10,"<PandasArray>
+['B00H9L26AA', 'B00GST8U4U', 'B00H7LINKE', 'B00GSBMNOQ', 'B00BEIYP1W']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'NaN', 'NaN']"
+11,"<PandasArray>
+['B00H83EUL2', 'B008JFUS0U', 'B00H9KKGTO', 'B00HEPDGKA', 'B00HEPE6MM']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'NaN', 'NaN']"
+12,"<PandasArray>
+['B00HEPE6MM', 'B00BEJL6JK', 'B00K2CHVJ4', 'B00H7LINKE', 'B00H7KJRVY']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'NaN', 'NaN']"
+13,"<PandasArray>
+['B00GSBMNOQ', 'B00BEIYSL4', 'B00AIBZMD6', 'B00GUO2SKA', 'B008JFUNHI']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'NaN', 'NaN']"
+14,"<PandasArray>
+['B008JFUQ16', 'B0059XTU3G', 'B00BC36YWC', 'B00H1RMOI6', 'B008JFUNKU']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'NaN', 'NaN']"
+15,"<PandasArray>
+['B008JFUS0U', 'B00FZM8Z7I', 'B008JFUNHI', 'B008JFUOWM', 'B008JFURII']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'NaN', 'NaN']"
+16,"<PandasArray>
+['B009934S5M', 'B00H83EUL2', 'B00GMV8LIO', 'B003EYVXV4', 'B008JFUOWM']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'NaN', 'NaN']"
+17,"<PandasArray>
+['B002ZG97E2', 'B008JFUQ16', 'B008JFUNKU', 'B00EV4EUT8', '6302320402']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'NaN', '101 Dalmatians [VHS]']"
+18,"<PandasArray>
+['B008JFUPFI', 'B008JFUO72', 'B003EYVXV4', 'B008JFURII', 'B0090SI56Y']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'NaN', 'NaN']"
+19,"<PandasArray>
+['B00HLTD3ZW', 'B00HEPDGKA', 'B008JFURII', 'B00H9KKGTO', '6302219205']
+Length: 5, dtype: object","['NaN', 'NaN', 'NaN', 'NaN', 'Riddick (Dvd, 2013) Rental Exclusive']"
