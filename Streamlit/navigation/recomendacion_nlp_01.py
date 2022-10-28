@@ -30,7 +30,7 @@ def pageII():
         'User', users)
 
     reviews = df[['asinID', 'title', 'reviewText', 'overall', 'imUrl']].where(df['user_index'] == user).dropna().reset_index(drop=True)
-
+    
     reviews_count = len(reviews)
 
     st.subheader(f"User {user} reviewed {reviews_count} products from {category}")
