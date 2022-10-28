@@ -8,7 +8,7 @@ width=50)
 
 pages = {
     'Main Page': landing.pageI,
-    'Recommendation system for users': recomendacion_nlp_01.pageII,
+    'Recommendation System': recomendacion_nlp_01.pageII,
     'Sentiment Analysis': analisis_sentimientos.pageIII
 }
 
