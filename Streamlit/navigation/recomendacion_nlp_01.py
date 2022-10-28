@@ -43,7 +43,7 @@ def pageII():
             col1.write('%s. **%s**' % (i, reviews.iloc[i]['title']))
             col1.image(reviews.iloc[i]['imUrl'], width=130)
             col2.metric("Rating", reviews.iloc[i]['overall'])
-            col2.write(f"Review: {reviews.iloc[i]['reviewText'][:200]}...")
+            col2.text_area('Review', reviews.iloc[i]['reviewText'], disabled=True)
 
     st.subheader(f"This user was recommended these products:")
 
