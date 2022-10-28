@@ -20,7 +20,7 @@ df = pd.read_csv(f"Streamlit/datasets/results/{category}_results.csv", nrows=100
 
 def pageIII():
     columns = st.columns((8,2,2))
-    columns[1].image("img\skaivuinsightslogo.png", width = 350)
+    columns[1].image("img/skaivuinsightslogo.png", width = 350)
     columns[0].title("🤖 Review Sentiment Analysis")
 
     review = df['reviewText'].sample()
