@@ -52,18 +52,3 @@ def paginator(label, items, items_per_page=10, on_sidebar=True):
     max_index = min_index + items_per_page
     import itertools
     return itertools.islice(enumerate(items), min_index, max_index)
-
-def demonstrate_paginator():
-    fruit_list = [
-        'Kiwifruit', 'Honeydew', 'Cherry', 'Honeyberry', 'Pear',
-        'Apple', 'Nectarine', 'Soursop', 'Pineapple', 'Satsuma',
-        'Fig', 'Huckleberry', 'Coconut', 'Plantain', 'Jujube',
-        'Guava', 'Clementine', 'Grape', 'Tayberry', 'Salak',
-        'Raspberry', 'Loquat', 'Nance', 'Peach', 'Akee'
-    ]
-    for i, fruit in paginator("Select a fruit page", fruit_list):
-        st.write('%s. **%s**' % (i, fruit))
-
-
-if __name__ == '__main__':
-    demonstrate_paginator()
