@@ -9,7 +9,7 @@ from functions import paginator
 
 def nav_to(url):
     nav_script = """
-        <meta http-equiv="refresh" content="0; url=javascript:window.open('%s','_self');">
+        <meta http-equiv="refresh" content="0; url='%s'">
     """ % (url)
     st.write(nav_script, unsafe_allow_html=True)
 
