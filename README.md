@@ -11,17 +11,18 @@
 1. Descripción general del proyecto
 2. Equipo de trabajo
 3. Metodología de trabajo
-4. Objetivo General
-5. Descripción y diccionario de los datos originales
-6. EDA
+4. Cronograma a la fecha
+5. Objetivo General
+6. Descripción y diccionario de los datos originales
 7. Solución: Data Pipeline
 8. Diccionario de los datos - Data Analytics 
+9. Diccionario de los datos - Machine Learning
 
 ## **Descripción general del proyecto**
 
 La compañía Amazon contrataron los servicios de ingeniería y análisis de datos de la empresa Skaivu Insights con el objetivo de apoyar el desarrollo de nuevas perspectivas para mejorar ventas y experiencia al usuario.
 
-La empresa se encargó de almacenar, transformar, estructurar, analizar y modelar la información proporcionada para crear un reporte de inteligencia empresarial, y adicionalmente un sistema automático de recomendación de productos relevantes, basado en la información de opiniones provenientes de otros usuarios.
+La empresa se encargará de almacenar, transformar, estructurar, analizar y modelar la información proporcionada para crear un reporte de inteligencia empresarial, y adicionalmente un sistema automático de recomendación de productos relevantes, basado en la información de opiniones provenientes de otros usuarios.
 
 ## Equipo de Trabajo
 
@@ -40,14 +41,21 @@ Skaivu Insights consta con un grupo de profesionales en diferentes áreas que es
 </div>
 <br>
 
-Se utilizó un método de trabajo ágil con enfoque en la metodología de gestión de proyectos Kanban utilizando el software de administración de proyectos [Trello](https://trello.com/en), en donde los integrantes del proyecto dividimos y asignamos las actividades a realizar y manteníamos un seguimiento a todo el proyecto.
+Se utilizará un método de trabajo ágil con enfoque en la metodología de gestión de proyectos Kanban utilizando el software de administración de proyectos [Trello](https://trello.com/en), en donde los integrantes del proyecto dividiremos y asignaremos las actividades a realizar y mantendremos un seguimiento a todo el proyecto.
 
-La unión de estas metodologías ofreció:
+La unión de estas metodologías nos dará:
 
 * Gestión de trabajo colaborativo
 * Resoluciones rápidas y efectivas
 * Visualización del flujo de trabajo
 * Simplicidad
+
+## **Cronograma a la fecha**
+
+<div align="center">
+    <img src="img\cronograma.png" alt="Project Screenshot" width="100%">
+</div>
+<br>
 
 ## **Objetivo General**
 
@@ -203,7 +211,7 @@ Las observaciones y características resultantes del análisis son las siguiente
 
 ***categories :***
 * Tipo de dato "string".
- 
+
 ## **Solución: Data Pipeline**
 ***Diagrama flujo del dato***
 <div align="center">
@@ -239,7 +247,19 @@ El ETL de Reviews sigue los siguientes pasos:
   * Cambio de nombre de columnas
   * Eliminación de columnas
   * Normalización      
-* **Carga** de los datos en la base de datos de Databricks. Se empleó el formato de datos "delta" que permite la rápida ejecución de querys. 
+* **Carga** de los datos en la base de datos de Databricks. Se empleó el formato de datos "delta" que permite la rápida ejecución de querys.
+
+El ETL para Metadata sigue los siguientes pasos:
+
+* **Extracción** de los links de conexión al contenedor
+* Definición del esquema para lectura en Pyspark
+* Creación del dataframe a partir del esquema creado
+* **Transformación** de los datos:
+    * Creación de la tabla de datos corruptos y no corruptos
+    * Normalización de los datos corruptos
+    * Unión de los datos corruptos transformados con datos de metadata no corruptos
+    * Normalización y limpieza de columnas
+* **Carga** de los datos en la base de datos de Databricks. Se empleó el formato de datos "delta" que permite la rápida ejecución de querys.
 
 ### 4. **Conexión SQL Database**
 
@@ -257,6 +277,10 @@ Para aliviar la carga de los datos se establece una carga en delta por años:
 * Del 2000 al 2004
 
 *Para más información acerca del proceso de ETL por favor revisar los Notebooks dentro de la carpeta de Scripts.*
+
+### 5. **Conexión con PowerBI**
+
+La conexión se realizó mediante el conector de Azure SQL Database de PowerBI. Se ingresan las credenciales del servidor de base de datos y se cargan los datos ya sea por Direct Query o Import Data. 
 
 ## **Diccionario de los datos - Data Analytics**
 
@@ -307,4 +331,25 @@ Para aliviar la carga de los datos se establece una carga en delta por años:
             year     --->    año
             Month    --->    Mes
             
-Para ver el dashboard realizado en PowerBI clic [aqui](https://app.powerbi.com/view?r=eyJrIjoiYjFjYWFkMzItOTllMy00ZDQ1LWEwNDctMTk2NTBjZjBiYzE2IiwidCI6ImJhYjBiNjc5LWJkNWYtNGZlOC1iNTE2LWM2YjhiMzE3Yzc4MiIsImMiOjR9)
+## **Diccionario de los datos - Machine Learning**
+            
+### **Product Table JOIN Reviews - ML**
+
+            asinID           --->    ID unico de productos
+            title            --->    Nombre del producto
+            categories       --->    Categorías del producto
+            reviewText       --->    Texto de la reseña
+            summary          --->    Resumen de la reseña 
+            overall          --->    Puntaje dado al producto
+            reviewerID       --->    ID del usuario, ejemplo: A2SUAM1J3GNN3B
+            
+### **Product Table Modified**
+
+            asinID            --->    ID unico de productos
+            description       --->    Descripción del producto
+            also_bought       --->    Artículos relacionados: Este producto se compra con este otro producto
+            also_viewed       --->    Artículos relacionados: A partir de este producto también miró este otro producto
+            bought_together   --->    Artículos relacionados: Estos productos se compran juntos
+            buy_after_viewing --->    Artículos relacionados: Se compró este producto después de mirar este otro producto
+            
+
