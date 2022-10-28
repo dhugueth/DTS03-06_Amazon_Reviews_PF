@@ -5,24 +5,39 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
+from random import choice
 
 # Model Variables
 MODEL = f"cardiffnlp/twitter-roberta-base-sentiment"
 tokenizer = AutoTokenizer.from_pretrained(MODEL)
 model = AutoModelForSequenceClassification.from_pretrained(MODEL)
 
+category = choice(["Amazon_Instant_Video", "Beauty", "Books", "CDs_Vinyls", "Cellphones_Accessories", 
+    "Clothing_Shoes_Jewelry", "Electronics", "Health_And_Personal", "Home_And_Kitchen", 
+    "Movies_And_TV", "Pet_Supplies", "Sports_And_Outdoors"])
+
+df = pd.read_csv(f"Streamlit/datasets/results/{category}_results.csv", nrows=100)
+
 def pageIII():
     columns = st.columns((8,2,2))
     columns[1].image("img\skaivuinsightslogo.png", width = 350)
     columns[0].title("🤖 Review Sentiment Analysis")
-    
-    st.markdown('''
-            ## Write a review!!
 
+    review = df['reviewText'].sample()
+
+    col1, col2 = st.columns([1,1])
+
+    col1.markdown('''
+            ## Write a review!!
     ''', unsafe_allow_html = True)
+    
+    random = col2.checkbox('Get Random Review', help='Get a random review to analyze')
+    if random:
+        col2.text_area(label='', value=review.iloc[0], disabled=True)
+
     with st.form(key = "inputText"):
         text = st.text_area("Enter Text Here")
-        submit_button = st.form_submit_button(label = "Analyze")        
+        submit_button = st.form_submit_button(label = "Analyze")
 
     # Modeling
     if submit_button:      
