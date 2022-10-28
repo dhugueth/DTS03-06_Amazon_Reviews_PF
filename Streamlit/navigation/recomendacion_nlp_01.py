@@ -8,7 +8,7 @@ from functions import paginator
 
 def pageII():
     columns = st.columns((8,2,2))
-    columns[1].image("img\skaivuinsightslogo.png", width = 350)
+    columns[1].image("img/skaivuinsightslogo.png", width = 350)
     columns[0].title("🤖 Recommendation System")
 
     category = st.sidebar.selectbox("Category", (
