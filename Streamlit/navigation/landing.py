@@ -17,4 +17,4 @@ def pageI():
         ###### [Tomás Astrada](https://www.linkedin.com/in/tom%C3%A1s-astrada-370b73171/) - Data Engineer
         ###### [Jean Fabra](https://www.linkedin.com/in/jeanfabra/) - Data Engineer 
         ###### [Jorge Fonseca](https://www.linkedin.com/in/jorge-fonseca-alba-83433b117/) - Data Scientist 
-        ###### [Daniela Hugueth](https://www.linkedin.com/in/dhugueth/) - Data Analyst""")
+        ###### [Daniela Hugueth](https://www.linkedin.com/in/dhugueth/) - Data Analyst""", unsafe_allow_html=True)
